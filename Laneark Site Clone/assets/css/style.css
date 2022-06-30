@@ -1,0 +1,1258 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+
+
+
+.pop-up {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.pop-up .box {
+    margin-top: 50px;
+    background-color: white;
+    width: 600px;
+    height: 450px;
+    border-radius: 5px;
+}
+
+.pop-up .box .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(199, 192, 192);
+}
+
+.pop-up .box .header button {
+    width: 50px;
+    height: 20px;
+}
+
+.pop-up .box h1 {
+    width: 100%;
+    margin-top: 20px;
+    color: rgba(0, 0, 0, 0.425);
+    font-weight: normal;
+}
+
+.pop-up .box .image {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pop-up .box img {
+    width: 150px;
+    height: 150px;
+}
+
+.pop-up .box .input-field {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.pop-up .box input {
+    width: 90%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.pop-up .box .links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pop-up .box a {
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: rgb(18, 44, 130);
+    color: white;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
+.pop-up .box a.submit {
+    margin-right: 20px;
+    background-color: rgb(196, 76, 29);
+}
+
+
+
+
+
+
+.nav-bar {
+    width: 100%;
+    height: 90px;
+    background: white;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+    /*(horizontal, vertical, blur, color) a stands for opacity which means how visible the color should be. It has value from 0 to 1*/
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-bar ul {
+    float: right;
+    position: relative;
+    /*The 3 basic positions are absolute, relative and fixed. Relative tells the element to start moving from the place where it was created. */
+    top: 40px;
+    /*Absolute tells the element to start moving from where the parent is. */
+    right: 100px;
+    /*Fixed tells the element to start moving from the beginning of the page. */
+}
+
+.nav-bar ul li {
+    display: inline;
+    margin: 10px;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: #2b6ed1;
+}
+
+.nav-bar ul li a:hover {
+    color: #bd450c;
+    text-decoration: underline;
+}
+
+.nav-bar ul li a.home {
+    color: #b85c39;
+    text-decoration: underline;
+}
+
+.nav-bar ul li a.home:hover {
+    color: #2b6ed1;
+    text-decoration: none;
+}
+
+.nav-bar ul li a.get-started {
+    background: rgb(18, 44, 130);
+    color: white;
+    border-radius: 5px;
+    /*width property doesn't work with anchor tag*/
+    padding: 10px 35px 10px 35px;
+    /*padding: top right bottom left*/
+}
+
+.nav-bar img {
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+.nav-bar .menu-icon {
+    display: none;
+}
+
+
+
+
+
+/* pop up style */
+
+
+
+
+
+.hero {
+    width: 100%;
+    height: auto;
+    background-color: #f5e9e7;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 50px 0 150px 0;
+}
+
+.hero .left {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.hero .left .box {
+    height: auto;
+}
+
+.hero .left .box h1 {
+    color: #bd450c;
+    margin-bottom: 30px;
+    font-size: 45px;
+}
+
+.hero .left .box p {
+    color: #000;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+@keyframes breath {
+    0% {
+        transform: scale(0.5);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.5);
+    }
+}
+
+.hero .left button {
+    cursor: pointer;
+    background: rgb(18, 44, 130);
+    color: white;
+    border-radius: 5px;
+    padding: 10px 35px 10px 35px;
+    text-decoration: none;
+    animation: breath 5s ease infinite;
+}
+
+@keyframes hero_image {
+    from {
+        right: -500px;
+        opacity: 0;
+    }
+
+    to {
+        right: 0%;
+        opacity: 1;
+    }
+}
+
+.hero .right {
+    width: 50%;
+    height: auto;
+    position: relative;
+}
+
+.hero .right img {
+    width: 90%;
+    height: auto;
+}
+
+.core-values {
+    width: 100%;
+    height: auto;
+}
+
+.core-values .header {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+.core-values .header .image {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+
+}
+
+.core-values .header .image img {
+    padding-top: 20px;
+}
+
+.core-values .header h1 {
+    font-weight: normal;
+    color: rgb(18, 44, 130);
+    padding-top: 50px;
+    padding-bottom: 30px;
+    position: relative;
+    text-align: center;
+}
+
+.core-values .header p {
+    text-align: center;
+    width: 85%;
+    margin: auto;
+}
+
+.core-values .body {
+    width: 100%;
+    height: auto;
+    /* background-color: blue; */
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.core-values .body .left {
+    width: 65%;
+    height: 100%;
+    /* background-color: #b85c39; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-left: 50px;
+}
+
+.core-values .body .left .box {
+    width: 45%;
+    height: auto;
+    /* background-color: darkkhaki; */
+    margin: 10px;
+    padding: 10px;
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+
+.core-values .body .left .box .icon {
+    display: flex;
+    justify-content: center;
+}
+
+.core-values .body .left .box .title {
+    width: 100%;
+}
+
+.core-values .body .left .box .title h3 {
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.core-values .body .left .box .description {
+    width: 100%;
+}
+
+.core-values .body .left .box .description p {
+    text-align: center;
+    width: 85%;
+    margin: auto;
+}
+
+.core-values .body .right {
+    width: 35%;
+    height: 100%;
+    /* background-color: aqua; */
+}
+
+.core-values .body .right .dots {
+    width: 100px;
+    height: 300px;
+    margin-left: 300px;
+    margin-top: -30px;
+    position: absolute;
+    z-index: -1;
+}
+
+.core-values .body .right img {
+    width: 75%;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-bottom: 35px;
+    border-radius: 5px;
+}
+
+.what-we-do {
+    width: 100%;
+    height: auto;
+    background-color: #f8f9fa;
+}
+
+.what-we-do .header {
+    width: 100%;
+    height: auto;
+    /* background-color: gray; */
+}
+
+.what-we-do .header h1 {
+    text-align: center;
+    font-weight: normal;
+    color: rgb(18, 44, 130);
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.what-we-do .header p {
+    width: 86%;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.what-we-do .body {
+    width: 100%;
+    height: auto;
+    /* background-color: aqua; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.what-we-do .body .box {
+    width: 25%;
+    height: auto;
+    background-color: #fff;
+    margin: 20px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-radius: 5px;
+    box-shadow: rgb(18 44 130 / 5%) 0px 0px 13px 3px;
+    text-align: center;
+}
+
+.what-we-do .body .box:hover {
+    background-color: rgb(18, 44, 130);
+    color: white;
+}
+
+.what-we-do .body .box .icon {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.what-we-do .body .box:hover svg path {
+    fill: #fff;
+}
+
+.what-we-do .body .box .title h3 {
+    color: rgb(18, 44, 130);
+    padding-bottom: 20px;
+    font-weight: 500;
+    width: 60%;
+    margin: auto;
+}
+
+.what-we-do .body .box:hover .title h3 {
+    color: white;
+}
+
+.what-we-do .body .box .description {
+    width: 90%;
+    line-height: 1.5;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.what-we-do .body .box a {
+    text-decoration: none;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(18, 44, 130);
+    color: rgb(18, 44, 130);
+}
+
+.what-we-do .body .box:hover a {
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.why-laneark {
+    width: 100%;
+    height: 600px;
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    padding-top: 30px;
+}
+
+.why-laneark .header {
+    width: 100%;
+}
+
+.why-laneark .header h1 {
+    width: 100%;
+    text-align: center;
+    font-weight: normal;
+    color: rgb(18, 44, 130);
+    margin-bottom: 25px;
+}
+
+.why-laneark .header p {
+    width: 100%;
+    text-align: center;
+}
+
+.why-laneark .body {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.why-laneark .body .box {
+    width: 23%;
+    height: auto;
+    /* background: salmon; */
+    margin: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.why-laneark .body .box .num-con {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.why-laneark .body .box .num-con .number {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(18, 44, 130);
+    color: #fff;
+    font-size: 18px;
+}
+
+.why-laneark .body .box .icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.why-laneark .body .box h3 {
+    font-weight: 500;
+    text-align: center;
+    color: rgb(18, 44, 130);
+    margin-bottom: 25px;
+}
+
+.why-laneark .body .box p {
+    text-align: center;
+    width: 85%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.our-works {
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+    background-color: #f8f9fa;
+}
+
+.our-works .header {
+    width: 100%;
+    height: auto;
+}
+
+.our-works .header h1 {
+    text-align: center;
+    color: rgb(18, 44, 130);
+    padding-top: 70px;
+    padding-bottom: 15px;
+    font-weight: normal;
+}
+
+.our-works .header p {
+    text-align: center;
+}
+
+.our-works .body {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.our-works .body .box {
+    width: 27%;
+    height: 400px;
+    /* background-color: palegoldenrod; */
+    margin: 20px;
+    border-radius: 10px;
+    margin-top: -10px;
+}
+
+.our-works .body .box img {
+    width: 100%;
+    height: 100%;
+}
+
+.our-works .body .see-more {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.our-works .body .see-more a {
+    padding: 10px 35px 10px 35px;
+    border: 1px solid #bd450c;
+    text-decoration: none;
+    color: #bd450c;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.what-people {
+    width: 100%;
+    height: auto;
+    background-color: #000;
+}
+
+.what-people h1 {
+    width: 100%;
+    text-align: center;
+    padding: 60px 0 60px 0;
+    color: white;
+    font-weight: normal;
+}
+
+.what-people .body {
+    width: 100%;
+    padding-top: 0px;
+}
+
+.what-people .body .box {
+    width: 30%;
+    height: 150px;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.what-people .body .box .header {
+    width: 100%;
+    height: 70px;
+    /* background-color: palegoldenrod; */
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.what-people .body .box .header .icon {
+    width: 20%;
+    float: left;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.what-people .body .box .header .icon img {
+    width: 56px;
+    height: 56px;
+}
+
+.what-people .body .box .header .name {
+    margin-top: 10px;
+    width: 60%;
+    margin-left: -75px;
+}
+
+.what-people .body .box .header .name h3 {
+    color: black;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.what-people .body .box .header .name p {
+    padding-left: 7px;
+}
+
+.what-people .body .box .header .icon2 {
+    width: 20%;
+}
+
+.what-people .body .box .header .icon2 img {
+    float: right;
+    margin-top: 20px;
+    margin-right: -45px;
+}
+
+.what-people .body .box .description {
+    width: 90%;
+    margin: auto;
+    padding-top: 10px;
+    line-height: 1.5;
+}
+
+.newsletter {
+    width: 1005;
+    height: auto;
+    background-color: rgb(229, 229, 229);
+}
+
+.newsletter h1 {
+    text-align: center;
+    font-weight: 500;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    font-size: 38px;
+}
+
+.newsletter p {
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.newsletter .bar {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.newsletter .bar .text-bar {
+    border: 1px solid grey;
+    width: 40%;
+    height: 30px;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 10px;
+    background-color: white;
+}
+
+.newsletter .bar button {
+    border: 1px;
+    border-radius: 0 5px 5px 0;
+    width: 15%;
+    height: 50px;
+    background-color: rgb(18, 44, 130);
+    color: white;
+    font-size: 20px;
+}
+
+.footer {
+    width: 100%;
+    height: 500px;
+    background-color: #b85c39;
+}
+
+.footer .body1 {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding-top: 20px;
+    border-bottom: 1px solid white;
+}
+
+.footer .body1 .box {
+    width: 20%;
+    height: auto;
+    margin: 10px;
+}
+
+.footer .body1 .box .icon {
+    padding-bottom: 10px;
+}
+
+.footer .body1 .box p {
+    line-height: 1.5;
+    text-align: left;
+    width: 97%;
+    color: white;
+}
+
+.footer .body1 .box h3 {
+    color: white;
+    font-weight: 500;
+    padding-top: 45px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.footer .body1 .box ul {
+    margin-left: 25px;
+}
+
+.footer .body1 .box ul li {
+    color: white;
+    line-height: 1.5;
+}
+
+.footer .body1 .box p {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.footer .body1 .box .tel {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.footer .body1 .box .tel img {
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.footer .body1 .box .tel ul {
+    padding-bottom: 10px;
+    list-style: none;
+}
+
+.footer .body1 .box .tel ul li a {
+    color: white;
+}
+
+.footer .body1 .box .message {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.footer .body1 .box .message img {
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.footer .body1 .box .message ul {
+    list-style: none;
+}
+
+.footer .body1 .box .message ul li a {
+    color: white;
+}
+
+.footer .body2 {
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid white;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .body2 .box {
+    width: 23%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.footer .body2 .box .icon {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding-left: 50px;
+}
+
+.footer .body2 .box .icon svg {
+    padding-right: 20px;
+}
+
+.footer .body2 .box p {
+    color: white;
+}
+
+.footer .body3 p {
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.footer .body3 .icon img {
+    float: right;
+    width: 60px;
+    height: 60px;
+    margin-top: -80px;
+    padding-right: 30px;
+}
+
+
+
+
+
+/* tablet screen starts */
+@media only screen and (max-width: 920px) {
+
+    /* .nav-bar{
+    } */
+    .nav-bar ul {
+        display: none;
+        position: relative;
+        top: 100px;
+        left: -150px;
+        width: 50%;
+        height: auto;
+        background: white;
+        z-index: 1000;
+    }
+
+    .nav-bar ul li {
+        display: block;
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-bar img {
+        margin-left: 30px;
+    }
+
+    .nav-bar .menu-icon {
+        float: right;
+        padding-top: 30px;
+        padding-right: 30px;
+        display: block;
+    }
+
+    .hero {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: wrap;
+    }
+
+    .hero .left,
+    .hero .right {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero .left .box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .hero .left .box h1 {
+        width: 90%;
+        color: #bd450c;
+        margin-bottom: 30px;
+        font-size: 45px;
+        text-align: center;
+    }
+
+    .core-values .body {
+        flex-flow: row wrap;
+    }
+
+    .core-values .body .left {
+        width: 100%;
+    }
+
+    .core-values .body .left .box {
+        width: 45%;
+        margin: 5px;
+        padding-left: 0px;
+    }
+
+    .core-values .body .right {
+        width: 100%;
+    }
+
+    .core-values .body .right img {
+        width: 45%;
+    }
+
+    .what-we-do .body .box {
+        width: 40%;
+    }
+
+    .why-laneark .body .box {
+        width: 40%;
+    }
+
+    .our-works .body .box {
+        width: 43%;
+        height: 350px;
+    }
+
+    .what-people .body .box {
+        width: 40%;
+    }
+
+    .newsletter .bar .text-bar {
+        width: 50%;
+    }
+
+    .newsletter .bar button {
+        width: 20%;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .footer .body1 {
+        width: 100%;
+        height: auto;
+        flex-flow: row wrap;
+    }
+
+    .footer .body1 .box {
+        width: 40%;
+        margin: 35px;
+    }
+
+    .footer .body2 {
+        height: auto;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer .body2 .box {
+        margin: auto;
+        margin-top: 10px;
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .footer .body2 .box .icon {
+        padding-left: 30px;
+    }
+
+    .footer .body2 .box p {
+        padding-bottom: 10px;
+    }
+
+    .footer .body3 {
+        height: auto;
+        padding-bottom: 25px;
+    }
+}
+
+/* tablet screen ends */
+
+
+/* mobile screen starts */
+@media only screen and (max-width: 500px) {
+    .core-values .header p {
+        width: 90%;
+    }
+
+    .core-values .body .left .box {
+        width: 90%;
+        margin: 0px;
+    }
+
+    .core-values .body .right {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .core-values .body .right img {
+        width: 90%;
+    }
+
+    .what-we-do .header p {
+        width: 95%;
+    }
+
+    .what-we-do .body .box {
+        width: 90%;
+    }
+
+    .why-laneark {
+        height: 200px;
+        background-size: cover;
+    }
+
+    .why-laneark .body .box {
+        width: 100%;
+    }
+
+    .why-laneark .body .box p {
+        width: 98%;
+    }
+
+    .our-works .body .box {
+        width: 40%;
+        height: auto;
+    }
+
+    .what-people h1 {
+        width: 90%;
+        text-align: left;
+        margin: auto;
+    }
+
+    .newsletter .bar button {
+        width: 30%;
+    }
+
+    .footer .body1 .box {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .pop-up .box {
+        width: 350px;
+    }
+}
+
+/* mobile screen starts */
+@media only screen and (max-width: 400px) {
+
+    /* .nav-bar{
+    } */
+    .nav-bar ul {
+        display: none;
+        position: relative;
+        top: 100px;
+        left: -150px;
+        width: 50%;
+        height: auto;
+        background: white;
+        z-index: 1000;
+    }
+
+    .nav-bar ul li {
+        display: block;
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-bar img {
+        margin-left: 30px;
+    }
+
+    .nav-bar .menu-icon {
+        float: right;
+        padding-top: 30px;
+        display: block;
+    }
+
+    .hero .left {
+        width: 100%;
+    }
+
+    .hero .left .box {
+        width: 90%;
+    }
+
+    .hero .left .box h1 {
+        color: #bd450c;
+        margin-bottom: 30px;
+        font-size: 20px;
+    }
+
+    .hero .left .box p {
+        text-align: center;
+        color: #000;
+        margin-bottom: 30px;
+        font-size: 15px;
+    }
+
+    .core-values .header p {
+        width: 90%;
+    }
+
+    .core-values .body .left .box {
+        width: 90%;
+        margin: 0px 0px 0px -30px;
+    }
+
+    .core-values .body .right {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    
+    .core-values .body .right .dots {
+        width: 100px;
+        height: 200px;
+        margin-left: 100px;
+        margin-top: -30px;
+        position: absolute;
+        z-index: -1;
+    }
+    
+    .core-values .body .right img {
+        width: 75%;
+        padding-left: 20px;
+        padding-top: 10px;
+        margin-bottom: 35px;
+        border-radius: 5px;
+    }
+
+    .what-we-do .header p {
+        width: 95%;
+    }
+
+    .what-we-do .body .box {
+        width: 90%;
+    }
+
+    .why-laneark {
+        height: 200px;
+        background-size: cover;
+    }
+
+    .why-laneark .body .box {
+        width: 100%;
+    }
+
+    .why-laneark .body .box p {
+        width: 98%;
+    }
+
+    .our-works {
+        border-top: 2px solid #2b6ed1;
+    }
+
+    .our-works .body .box {
+        width: 40%;
+        height: auto;
+    }
+
+    .our-works .body .box img {
+        width: 300px;
+        margin-left: -70px;
+    }
+
+    .what-people h1 {
+        width: 90%;
+        text-align: center;
+        margin: auto;
+    }
+
+    .what-people .body .box {
+        width: 80%;
+    }
+
+    .newsletter .bar button {
+        width: 30%;
+    }
+
+    .footer .body1 .box {
+        width: 100%;
+        margin-top: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .footer .body1 .box h3,
+    .footer .body1 .box p {
+        text-align: center;
+        width: 90%;
+
+    }
+
+    .pop-up .box {
+        width: 350px;
+    }
+}
